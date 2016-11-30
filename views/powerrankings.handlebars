@@ -1,0 +1,293 @@
+<div id='powerRanking'>
+  <table>
+    <tr>
+      <th colspan='6'>
+        <h3>2016 Power Rankings: Week 13</h3>
+      </th>
+    </tr>
+    <tr>
+      <td class='center'><b>Rank</b></td>
+      <td class='center'><b>Team / Record</b></td>
+      <td class='center'><b>Trending</b></td>
+      <td class='center'><b>Record</b><sup>1</sup></td>
+      <td class='center'><b>Points</b><sup>2</sup></td>
+      <td class='center'><b>ECR</b><sup>3</sup></td>
+    </tr>
+    {{#each rankings}}
+      <tr class='rank'>
+        <td>
+          <div class='ranking'>{{rank}}</div>
+        </td>
+        <td>
+          <div class='team-name'><a href='{{url}}'>{{name}}</a></div>
+          <div class='team-record'>{{record}}</div>
+        </td>
+        <td class='center'>
+          <div>
+            <span class='{{direction}}'></span>
+            <span class='{{delta}}'>{{change}}</span>
+          </div>
+          <div class='last-weeks-position'>Last Week: {{previousRank}}</div>
+        </td>
+        <td class="center">
+          <span class="score">{{recordScore}}</span>
+        </td>
+        <td class="center">
+          <span class="score">{{pointsScore}}</span>
+        </td>
+        <td class="center">
+          <span class="score">{{ecrScore}}</span>
+        </td>
+      </tr>
+    {{/each}}
+  </table>
+  <div class="scoreFoot">
+    <p><sup>1</sup> The record score is a team's record relative to a perfect record. To calculate it, the perfect category score (12) is multiplied by each team's win percentage.</p>
+    <p><sup>2</sup> The points score is a team's rank for cumulative points scored.</p>
+    <p><sup>3</sup> The Expert Consensus Rank (ECR) score is each team's players ranked according to an average of various expert's rest of season player rankings.</p>
+  </div>
+</div>
+<style>
+  #powerRanking {
+    width: 100%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid white;
+    border-radius: 3px;
+  }
+
+  #powerRanking table {
+    border: 0px solid black;
+    font-size: 12px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  #powerRanking table tr {
+    background-color: #F8F8F2;
+  }
+
+  #powerRanking table tr:nth-child(odd) {
+    background-color: #F2F2E8;
+  }
+
+  #powerRanking table tr:nth-child(2) {
+    background-color: #6DBB75;
+  }
+
+  #powerRanking table tr:first-child {
+    width: 500px;
+    background-color: #1D7225;
+    color: white;
+    text-align: center;
+  }
+
+  th {
+    border-radius: 3px 3px 0px 0px;
+  }
+
+  tr.rank {
+    height: 60px;
+    vertical-align: middle;
+  }
+
+  tr.rank td:first-child {
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    width: 10%;
+  }
+
+  .ranking {
+    border-radius: 50px;
+    color: white;
+    padding: 0px;
+    margin: auto;
+  }
+
+  tr.rank:nth-child(3) .ranking {
+    background: #1D7225;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  tr.rank:nth-child(4) .ranking {
+    background: #1D7225;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  tr.rank:nth-child(5) .ranking {
+    background: #1D7225;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  tr.rank:nth-child(6) .ranking {
+    background: #1D7225;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+  }
+
+  tr.rank:nth-child(7) .ranking {
+    background: #1D7225;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  tr.rank:nth-child(8) .ranking {
+    background: #1D7225;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+  }
+
+  tr.rank:nth-child(9) .ranking {
+    background: firebrick;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+  }
+
+  tr.rank:nth-child(10) .ranking {
+    background: firebrick;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  tr.rank:nth-child(11) .ranking {
+    background: firebrick;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+  }
+
+  tr.rank:nth-child(12) .ranking {
+    background: firebrick;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+
+  tr.rank:nth-child(13) .ranking {
+    background: firebrick;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  tr.rank:nth-child(14) .ranking {
+    background: firebrick;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+
+  tr.rank td:nth-child(2) {
+    width: 10%;
+    vertical-align: middle;
+  }
+
+  tr.rank td:nth-child(3) {
+    width: 10%;
+    vertical-align: middle;
+  }
+
+  tr.rank td:nth-child(4) {
+    width: 15%;
+    vertical-align: middle;
+  }
+
+  tr.rank td:nth-child(5) {
+    width: 15%;
+    vertical-align: middle;
+  }
+
+  tr.rank td:nth-child(6) {
+    width: 15%;
+    vertical-align: middle;
+  }
+
+  .teamPicture img {
+    position: relative;
+    left: 7px;
+    height: 55px;
+    vertical-align: middle;
+  }
+
+  .team-name {
+    font-size: 14px;
+  }
+
+  .team-name a {
+    text-decoration: none !important;
+    color: #225DB7 !important;
+  }
+
+  .team-record {
+    color: #888;
+  }
+
+  .up {
+    border-bottom: 8px solid green;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    width: 0px;
+    position: relative;
+    left: -4px;
+    top: -22px;
+  }
+
+  .down {
+    border-top: 8px solid red;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    width: 0px;
+    position: relative;
+    left: -4px;
+  }
+
+  .no-change {
+    border-top: 8px solid transparent;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+  }
+
+  .delta {
+    width: 20px;
+    position: relative;
+    font-size: 17px;
+    line-height: 20px;
+    top: -9px;
+  }
+
+  .delta-up {
+    color: green;
+  }
+
+  .delta-down {
+    color: red;
+  }
+
+  .last-weeks-position {
+    color: #888;
+    font-size: 10px;
+    top: -5px;
+    position: relative;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .scoreFoot {
+    font-size: 0.75em;
+  }
+</style>
